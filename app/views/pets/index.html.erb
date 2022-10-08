@@ -1,0 +1,14 @@
+<h1>Lost Pets</h1>
+
+<div class="row row-cols-4 g-4">
+  <% @pets.each do |pet| %>
+    <%= render 'pet', pet: pet %>
+  <% end %>
+</div>
+
+
+
+<%= link_to new_pet_path, class: 'btn btn-primary mt-5' do %>
+  <i class="fa-solid fa-paw"></i>
+  Add Lost Pet
+<% end %>
